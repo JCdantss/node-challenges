@@ -1,8 +1,11 @@
-const somatorioDeNotas = require('./resultado-escolar')
+const mediaDeNotas = require('./resultado-escolar')
 
 test('Aprovado', () => {
-    expect(somatorioDeNotas(9, 9, 10, 10)).toBe(true)
+    expect(mediaDeNotas(9, 9, 10, 10)).toBe('Aprovado')
 })
 test('Reprovado', () => {
-    expect(somatorioDeNotas(3, 4, 5, 5)).toBe(false)
+    expect(mediaDeNotas(5, 0, 4, 4)).toBe('Reprovado')
+})
+test('Exame', () => {
+    expect(mediaDeNotas(6, 5, 5, 5)).toBe('Exame')
 })
