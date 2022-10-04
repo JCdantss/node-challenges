@@ -1,10 +1,9 @@
 const numerosDivisiveis = (num1, num2) => {
-    const number1 = []
-    const number2 = []
+    const numerosDivisores = []
     for (let i = num1; i <= num2; i++) {
-        i % 2 === 0 ? number1.push(i) : number2.push(i)
+        if (i % 2 === 0) { numerosDivisores.push(i) }
     }
-    return number1
+    return numerosDivisores
 }
 module.exports = numerosDivisiveis
 
